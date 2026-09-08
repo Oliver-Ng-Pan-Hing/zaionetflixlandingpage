@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Scoutie+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
 
 *{
     margin: 0;
@@ -13,7 +16,13 @@
 */
 
 /* FONT 
-    font-family: "Scoutie Sans", sans-serif; */
+    font-family: "Scoutie Sans", sans-serif; 
+    font-family: "Google Sans", sans-serif; 
+    font-family: "Playfair Display", serif;*/
+
+body{
+    background-color: black;
+}
 
 #hero{
     background-image: url(/resources/hero-img.png);
@@ -157,10 +166,6 @@ input::placeholder {
     color: #ffffff;
 }
 
-.fa-angle-right{
-    /* margin-left: 0.25em */
-}
-
 /* ---------END OF HERO--------------------- */
 
 /* ---------START OF MAIN (SHOWS)----------- */
@@ -281,6 +286,7 @@ input::placeholder {
 
 .tv-info{
     color: #ffffff;
+    width: 50%;
 } 
 
 .tv-info h1{
@@ -294,6 +300,7 @@ input::placeholder {
 }
 
 .tv-video{
+    width: 50%;
     position: relative;
 }
 
@@ -306,7 +313,7 @@ input::placeholder {
 .tv-video video{
 position: absolute;
 top: 20%;
-left: 12%;
+left: 13%;
 z-index: 0;
 }
 
@@ -320,6 +327,7 @@ z-index: 0;
     justify-content: center;
 
     padding-top: 2.5em;
+    padding-bottom: 2em;
 }
 
 .reasons{
@@ -354,7 +362,7 @@ z-index: 0;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: ;
+
     padding: 2em;
     padding-left: 1.5em;
     padding-bottom: 1em;
@@ -379,15 +387,555 @@ z-index: 0;
     padding-top: 1em;
 }
 
-.reason-image{
-   
-}
-
 .reason-image svg{
     position: absolute;
     top: 72%;
     left: 68%;
 }
 
+/* ----END OF BENEFITS------ */
+
+/* ----START OF FAQ------ */
+
+#faq{
+    background-color: black;
+    display: flex;
+    justify-content: center;
+
+    padding-top: 2.5em;
+}
+
+.faq-wrapper{
+    width: 63%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    color: #ffffff;
+}
+
+.faq-wrapper h2{
+    font-weight: 700;
+    font-size: 2rem;
+    margin-bottom: 0.5em;
+}
+
+
+.details-container{
+    display: flex;
+    flex-direction: column;
+    /* background-color: #dd2121; */
+    width: 100%;
+}
+
+.faq-card{
+    background-color: #2e2e2e;
+    margin-bottom: 0.5em;
+}
+
+.faq-card summary{
+   transition: background-color 0.2s ease-in-out;
+}
+
+.faq-summary{
+    font-size: 1.5rem;
+    padding: 1.125em 1em;
+    cursor: pointer;
+    list-style: none;
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faq-summary span{
+    font-family: "Google Sans", sans serif;
+}
+
+.faq-summary::after{
+    content: "+";
+    font-size: 3.5rem;
+    font-family: "Playfair Display", serif;
+    line-height: 0;
+}
+
+.faq-card summary, p{
+    font-family: "Google Sans", sans-serif;
+}
+
+.faq-card p{
+    font-family: "Google Sans", sans-serif;
+    padding: 1em 1em 0.75em 1em;
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.faq-card p:last-child{
+    padding-top: 0.5em;
+}
+
+/* DETAILS OPEN + DETAILS HOVER*/
+
+details[open] summary {
+  border-bottom: 1px solid black;
+}
+
+details summary:hover{
+    background-color: #3a3a3a; 
+}
+
+details[open] .faq-summary::after{
+    content: "✕";
+    font-size: 2rem;
+    margin-right: 0.1em;
+}
+
+/* --END-----DETAILS OPEN + DETAILS HOVER ------------------------*/
+
+.faq-submit{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.faq-submit label{
+    padding-top: 4em;
+    padding-bottom: 1em;
+}
+
+.faq-submit .submit{
+    width: 68%;
+}
+
+.faq-submit .submit input{
+    width: 75%;
+    margin-left: 0.5em;
+}
+
+.faq-submit .submit button{
+    width: 25%;
+}
+
+/* ----END OF FAQ------ */
+
+/* ----START OF FOOTER------ */
+
+#footer{
+    background-color: black;
+    color: #b3b3b3;
+
+    display: flex;
+    justify-content: center;
+
+    padding-top: 3em
+}
+
+.footer-wrapper{
+    width: 63%;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.footer-title{
+      padding: 3em 0;
+      padding-bottom: 2em;
+      font-size: 1rem;
+      font-weight: 500;
+}
+
+.footer-title span{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.footer-container{
+    width: 100%;
+}
+
+.footer-container ul{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+}    
+
+li{
+    list-style: none;
+    font-size: 0.9rem;
+    cursor: pointer;
+    text-decoration: underline;
+
+    margin-top: 1em;
+}
+
+.footer-end{
+    display: flex;
+    flex-direction: column;
+
+    padding-top: 4em;
+    padding-bottom: 4em;
+}
+
+.footer-end .footer-languages{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 130px;
+    padding: 0.25em 0.5em;
+    border: 0.5px solid #808080;
+    border-radius: 0.25em;
+}
+
+.footer-end select{
+    
+    padding: 0 0.25em;
+    font-size: 1rem;
+    color: #ffffff;
+    background-color: transparent;
+    appearance: none;
+    border: none;
+    cursor: pointer;
+    /* background-color: #2e2e2e; */
+}
+
+select option{
+    text-align: center;
+}
+
+.fa-language{
+    font-size: 0.75rem;
+    color: #ffffff;
+    margin-left: 0.25em;
+}
+
+.fa-caret-down{
+    color: #ffffff;
+    font-size: 0.75rem;
+}
+
+.footer-end p{
+    padding-top: 3em;
+    padding-bottom: 2.5em;
+    font-size: 0.9rem;
+}
+
+.footer-end p:last-child{
+    font-size: 0.8em;
+    color: #808080;
+    padding: 0;
+    padding-bottom: 2em;
+}
+
+/* !!! TABLETS AND LESS!!! */
+
+@media (max-width: 768px){
+    #navbar{
+        max-width: 97%;
+}
+
+    #navbar img{
+    width: 89px;
+    height: 25px;
+}
+
+    #hero{
+        height: 87vh;
+    }
+
+    .hero-content-text{
+        padding-top: 3em;
+        width: 60%;
+        justify-content: flex-start;
+        height: 65%;
+    }
+
+    .curve-separator{
+        padding-top: 3.125em; 
+    }
+
+    .hero-content-text h1{
+        width: 70%;
+        font-size: 2rem;
+    }
+
+    .hero-content-text h2{
+        padding-top: 0.5em;
+        padding-bottom: 0.25em;
+        font-weight: 400;
+        font-size: 1rem;
+    }
+
+    .submit{
+        width: 90%;
+    }
+
+    .submit input{
+        width: 60%;
+    }
+
+    .submit button{
+        width: 40%;
+        font-size: 1.25rem;
+        font-weight: 600;
+    }
+
+/* ---MAIN--- */
+
+main{
+    margin-top: 2em;
+}
+
+/* ---MAIN--- */
+
+.show-cards-container{
+    width: 90%;   
+}
+
+.trending-title{
+    font-size: 0.75rem;
+}
+
+    .tv-container{
+    width: 90%;
+    flex-direction: column;
+}
+
+.tv-info{
+    width: 100%;
+}
+
+.tv-video{
+    width: 100%;
+}
+
+.tv-video img{
+    width: 100%;
+}
+
+.tv-video video{
+    width: 75%;
+
+    object-fit: cover;
+    position: absolute;
+    top: 20%;
+    left: 13%;
+    z-index: 0;
+}
+
+.tv-info h1{
+    font-size: 2rem;
+}
+
+.tv-info h2{
+    font-size: 1.25rem;
+}
+
+.reasons{
+    width: 90%;
+}
+
+.reason-cards-container{
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+}
+
+.reason-title h2{
+    font-size: 1.25rem;
+}
+
+.info h2{
+    font-size: 1.25rem;
+}
+
+    .reason-cards{
+        min-height: 200px;
+    }
+
+    .reason-image svg{
+    position: absolute;
+    top: 60%;
+    left: 85%;
+}
+
+.faq-wrapper{
+    width: 90%; 
+}
+
+.faq-wrapper h2{
+    font-size: 1.25rem;
+}
+
+.faq-summary{
+    font-size: 1.25rem;
+}
+
+.faq-card > p{
+    font-size: 1.125rem;
+}
+
+.faq-submit .submit{
+    width: 100%;
+    
+}
+
+.faq-submit .submit input{
+    margin-left: 0;
+}
+
+.faq-submit .submit button{
+    width: 30%;
+}
+
+.footer-wrapper{
+    width: 90%;
+}
+
+
+
+/* Do I want this???
+ #shows h1{
+    margin-top: 2em;
+    margin-bottom: 1.25em;
+    padding-left: 1em;
+} */
+
+}
+
+/* ---PHONES AND LESS--- */
+
+@media(max-width: 499px){
+
+    .hero-content-text{
+        padding-top: 1em;
+        width: 90%;
+        height: 60%;
+    }
+
+    .hero-content-text h1{
+        width: 100%;
+    }
+
+    .hero-content-text .submit{
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .hero-content-text .submit input{
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .hero-content-text .submit button{
+        width: 50%;
+    }
+
+    .curve-separator{
+        padding-top: 2em;
+        
+    }
+
+    .trending-title{
+    font-size: 0.6rem;
+    }
+
+    #shows h1{
+    margin-bottom: 0.2125em;
+    margin-top: 0;
+    }
+
+    .show-cards-container{
+    width: 100%;
+    }
+
+    .show-carousel{
+        height: 200px;
+        padding-left: 1.5em;
+    }
+
+    .show-cards{
+    min-width: 120px;
+    min-height: 180px;
+    }
+
+    .number{
+    font-size: 4rem;
+    }
+
+    .tv-info h1{
+    font-size: 1.25rem;
+    }
+
+    .tv-info h2{
+    font-size: 1rem;
+    }
+
+    .reason-title h2{
+    font-size: 1.125rem;
+    }
+
+    .info h2{
+    font-size: 1.25rem;
+    }
+
+    .reason-cards{
+        min-height: 210px;
+        padding-top: 1.25em;
+    }
+
+    .info h3{
+    font-size: 1rem;
+    }
+
+    .reason-image svg{
+    position: absolute;
+    top: 60%;
+    left: 77%;
+    width: 65px;
+    }
+
+    
+    .faq-wrapper h2{
+    font-size: 1.125rem;
+    font-weight: 500;
+    }
+
+    .faq-summary{
+    font-size: 1.125rem;
+    padding: 1.5em;
+    }
+
+    .faq-submit .submit{
+    width: 100%;
+    
+    }
+
+    .faq-summary::after{
+    font-size: 2.5rem;
+    }
+
+    details[open] .faq-summary::after{
+    content: "✕";
+    font-size: 1.5rem;
+    }
+
+    .faq-submit .submit{
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    .faq-submit .submit input{
+    width: 100%;
+    max-width: 100%;
+    }
+
+    .faq-submit .submit button{
+    width: 50%;
+    } 
+
+}
 
 
