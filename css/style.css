@@ -91,7 +91,7 @@ body{
     z-index: 2;
     color: #ffffff;
     width: 100%;
-    height: 100%;
+    height: 80vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -166,6 +166,12 @@ input::placeholder {
     color: #ffffff;
 }
 
+.curve-separator{
+    position: absolute;
+    z-index: 2;
+    bottom: -6%;
+}
+
 /* ---------END OF HERO--------------------- */
 
 /* ---------START OF MAIN (SHOWS)----------- */
@@ -180,7 +186,7 @@ input::placeholder {
 }
 
 #shows h1{
-    margin-top: 2em;
+    /* margin-top: 0.75em; */
     margin-bottom: 1.25em;
     padding-left: 1em;
 }
@@ -367,7 +373,7 @@ z-index: 0;
     padding-left: 1.5em;
     padding-bottom: 1em;
 
-     position: relative;    
+    position: relative;    
 }
 
 .reason-cards h2{
@@ -630,10 +636,101 @@ select option{
     padding-bottom: 2em;
 }
 
-/* !!! TABLETS AND LESS!!! */
+/* !!! SMALLER LAPTOP to before TABLET!!! */
 
-@media (max-width: 768px){
+@media (max-width: 1300px){
+
+     .hero-content-text{
+        padding-top: 0.5em;
+    }
+
+    .reasons{
+    width: 80%;
+    }
+
+    .reason-cards{
+        padding-top: 1em;
+        padding-right: 1em;
+        padding-left: 1em;
+    }
+
+    .reason-title{
+        font-size: 1rem;
+    }
+
+    .reason-cards h2{
+    font-size: 1.5rem;
+    }
+
+    .reason-cards-container{
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+   }
+
+   .show-cards-container{
+    width: 83%;
+    }
+    
+    #shows h1{
+    margin-bottom: 0;
+   }
+
+   .tv-container{
+    width: 80%;
+    justify-content: space-between;
+   }
+
+   .tv-info{
+    width: 40%;
+   }
+
+   .tv-video{
+    width: 60%;
+   }
+
+   .tv-info h1{
+    font-size: 2.5rem;
+    }
+
+    .tv-info h2{
+    font-size: 1.5rem;
+    }
+    
+    .faq-wrapper{
+    width: 80%;
+    }
+
+     .faq-wrapper h2{
+        font-size: 1.5125rem;
+        font-weight: 600;
+     }
+
+     .faq-submit .submit{
+    width: 80%;
+    }
+
+    .footer-wrapper{
+    width: 80%;
+    }
+
+    .footer-container ul{
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+}
+
+/* !!! TABLETS to before PHONE!!! */
+
+@media (max-width: 885px){
+
+     #hero{
+        height: 55vh;
+    }
+
+    .hero-content{
+        height: 50%;
+    }
+
     #navbar{
+        width: 97%;
         max-width: 97%;
 }
 
@@ -642,13 +739,9 @@ select option{
     height: 25px;
 }
 
-    #hero{
-        height: 87vh;
-    }
-
     .hero-content-text{
         padding-top: 3em;
-        width: 60%;
+        width: 70%;
         justify-content: flex-start;
         height: 65%;
     }
@@ -658,7 +751,7 @@ select option{
     }
 
     .hero-content-text h1{
-        width: 70%;
+        width: 75%;
         font-size: 2rem;
     }
 
@@ -670,7 +763,7 @@ select option{
     }
 
     .submit{
-        width: 90%;
+        width: 100%;
     }
 
     .submit input{
@@ -691,13 +784,40 @@ main{
 
 /* ---MAIN--- */
 
-.show-cards-container{
-    width: 90%;   
-}
-
 .trending-title{
-    font-size: 0.75rem;
-}
+    font-size: 0.6rem;
+    }
+
+    #shows h1{
+    margin-bottom: 0.2125em;
+    margin-top: 0;
+    }
+
+    .show-cards-container{
+    width: 95%;
+    }
+
+    .show-carousel{
+        height: 200px;
+        padding-left: 1.5em;
+    }
+
+    .show-cards{
+    min-width: 120px;
+    min-height: 180px;
+    }
+
+    .number{
+    font-size: 4rem;
+    }
+
+    .tv-info h1{
+    font-size: 1.25rem;
+    }
+
+    .tv-info h2{
+    font-size: 1rem;
+    }
 
     .tv-container{
     width: 90%;
@@ -757,7 +877,7 @@ main{
     .reason-image svg{
     position: absolute;
     top: 60%;
-    left: 85%;
+    left: 75%;
 }
 
 .faq-wrapper{
@@ -793,20 +913,28 @@ main{
     width: 90%;
 }
 
-
-
-/* Do I want this???
- #shows h1{
-    margin-top: 2em;
-    margin-bottom: 1.25em;
-    padding-left: 1em;
-} */
+.footer-container ul{
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}    
 
 }
 
 /* ---PHONES AND LESS--- */
 
-@media(max-width: 499px){
+@media(max-width: 599px){
+
+    #navbar{
+        width: 99%;
+        max-width: 99%;
+}
+
+    #hero{
+        height: 80vh;
+    }
+
+    .hero-content{
+        height: 50%;
+    }
 
     .hero-content-text{
         padding-top: 1em;
@@ -833,9 +961,9 @@ main{
     }
 
     .curve-separator{
-        padding-top: 2em;
-        
+        bottom: 0;
     }
+    
 
     .trending-title{
     font-size: 0.6rem;
@@ -936,6 +1064,50 @@ main{
     width: 50%;
     } 
 
+    .reason-cards-container{
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+   }
+
 }
 
+/* ---SMALL PHONES */
 
+@media (max-width: 369px){
+    #hero{
+        height: 100vh;
+    }
+
+    .hero-content-text{
+        justify-content: flex-start;
+        width: 80%;
+        height: 100%;
+    }
+
+    .hero-content-text h1{
+        width: 100%;
+    }
+
+    .hero-content-text .submit{
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .hero-content-text .submit input{
+        height: 50px;
+    }
+
+    .hero-content-text .submit button{
+        height: 50px;
+        width: 60%;
+    }
+
+    .curve-separator{
+        bottom: -5%;
+    }
+    
+    .reason-image svg{
+    top: 65%;
+    left: 70%;
+    }
+
+}
