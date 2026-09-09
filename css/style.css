@@ -522,7 +522,11 @@ details[open] .faq-summary::after{
 }
 
 .faq-submit .submit button{
-    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 25%;
+    /* padding: 0 200px; */
 }
 
 /* ----END OF FAQ------ */
@@ -635,6 +639,25 @@ select option{
     padding: 0;
     padding-bottom: 2em;
 }
+
+/* !!! SMALLER SCREEN !!! */
+
+@media (max-width: 1440px){
+
+        .faq-submit .submit button{
+            width: 35%;
+        }
+
+        #shows h1{
+            margin-bottom: 0.25em;
+            margin-top: 2rem;
+        }
+
+}
+
+
+
+
 
 /* !!! SMALLER LAPTOP to before TABLET!!! */
 
